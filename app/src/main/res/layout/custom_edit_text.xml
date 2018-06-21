@@ -7,21 +7,21 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/custom_title"
-            style="@style/custom_edit_text_title_style"
+            android:id="@+id/customTitle"
+            style="@style/custom_title_field_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/custom_error"
-            style="@style/custom_edit_text_error_style"
+            android:id="@+id/customError"
+            style="@style/custom_error_field_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/custom_title"
-            app:layout_constraintStart_toEndOf="@+id/custom_title"
-            app:layout_constraintTop_toTopOf="@id/custom_title" />
+            app:layout_constraintBottom_toBottomOf="@id/customTitle"
+            app:layout_constraintStart_toEndOf="@+id/customTitle"
+            app:layout_constraintTop_toTopOf="@id/customTitle" />
 
         <EditText
             android:id="@+id/custom_edit"
@@ -35,6 +35,6 @@
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/custom_title" />
+            app:layout_constraintTop_toBottomOf="@+id/customTitle" />
     </android.support.constraint.ConstraintLayout>
 </layout>

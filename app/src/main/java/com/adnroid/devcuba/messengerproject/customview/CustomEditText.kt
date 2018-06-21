@@ -22,7 +22,22 @@ class CustomEditText @JvmOverloads constructor(
 
         orientation = VERTICAL
         attrs.let {
-            binding.customTitle.text = "Text"
+            val typedArray = context.obtainStyledAttributes(it,
+                    R.styleable.CustomEditText, 0, 0)
+            val title = resources.getText(typedArray
+                    .getResourceId(R.styleable
+                            .CustomEditText_custom_title_field,
+                            R.string.email))
+            val errorText = resources.getText(typedArray
+                    .getResourceId(R.styleable
+                            .CustomEditText_custom_error_field,
+                            R.string.default_error))
+            binding.customTitle.text = title
+            if (errorText != resources.getString(R.string.default_error)) {
+                binding.customError.text = errorText
+            }
+
+            typedArray.recycle()
         }
     }
 }

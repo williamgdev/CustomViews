@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+        <attr name="custom_title_field" format="reference" />
+        <attr name="custom_error_field" format="reference" />
+    </declare-styleable>
+</resources>
