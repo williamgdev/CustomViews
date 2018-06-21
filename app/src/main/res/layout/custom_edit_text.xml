@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="@id/customTitle" />
 
         <EditText
-            android:id="@+id/custom_edit"
+            android:id="@+id/inputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"

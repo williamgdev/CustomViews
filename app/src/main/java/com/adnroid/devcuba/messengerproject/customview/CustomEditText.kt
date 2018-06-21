@@ -32,9 +32,13 @@ class CustomEditText @JvmOverloads constructor(
                     .getResourceId(R.styleable
                             .CustomEditText_custom_error_field,
                             R.string.default_error))
+            val inputText = typedArray.getString(R.styleable.CustomEditText_custom_input_field)
             binding.customTitle.text = title
             if (errorText != resources.getString(R.string.default_error)) {
                 binding.customError.text = errorText
+            }
+            if (inputText != resources.getString(R.string.default_input)) {
+                binding.inputField.setText(inputText)
             }
 
             typedArray.recycle()

@@ -3,5 +3,6 @@
     <declare-styleable name="CustomEditText">
         <attr name="custom_title_field" format="reference" />
         <attr name="custom_error_field" format="reference" />
+        <attr name="custom_input_field" format="string"/>
     </declare-styleable>
 </resources>
