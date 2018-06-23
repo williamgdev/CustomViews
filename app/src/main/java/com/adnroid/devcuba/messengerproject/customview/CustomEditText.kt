@@ -15,10 +15,9 @@ class CustomEditText @JvmOverloads constructor(
         defStyleRes: Int = 0
 ) : LinearLayout(context, attrs, defStyle, defStyleRes) {
 
-    private var binding: CustomEditTextBinding
+    private var binding: CustomEditTextBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.custom_edit_text, this, true)
 
     init {
-        binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.custom_edit_text, this, true)
 
         orientation = VERTICAL
         attrs.let {
@@ -32,16 +31,21 @@ class CustomEditText @JvmOverloads constructor(
                     .getResourceId(R.styleable
                             .CustomEditText_custom_error_field,
                             R.string.default_error))
-            val inputText = typedArray.getString(R.styleable.CustomEditText_custom_input_field)
+            val inputText = typedArray.getString(R.styleable.CustomEditText_custom_input_field) ?:""
             binding.customTitle.text = title
             if (errorText != resources.getString(R.string.default_error)) {
                 binding.customError.text = errorText
             }
             if (inputText != resources.getString(R.string.default_input)) {
-                binding.inputField.setText(inputText)
+                setInputText(inputText)
             }
 
             typedArray.recycle()
         }
     }
+
+    fun setInputText(inputTextField: String) {
+        binding.inputField.setText(inputTextField)
+    }
+
 }
