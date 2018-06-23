@@ -2,6 +2,7 @@ package com.adnroid.devcuba.messengerproject.customview
 
 import android.content.Context
 import android.databinding.DataBindingUtil
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -43,6 +44,12 @@ class CustomEditText @JvmOverloads constructor(
             typedArray.recycle()
         }
     }
+    fun getText(): String = binding.inputField.text.toString()
+
+    fun setText(text: String) = binding.inputField.setText(text)
+
+    fun addTextChangedListener(listener: TextWatcher) =
+            binding.inputField.addTextChangedListener(listener)
 
     fun setInputText(inputTextField: String) {
         binding.inputField.setText(inputTextField)
