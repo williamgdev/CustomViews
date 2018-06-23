@@ -24,19 +24,25 @@ class MainActivity : AppCompatActivity() {
 
         binding.setLifecycleOwner(this)
         binding.button.setOnClickListener { viewModel.inputText.value = "Testing LiveData" }
-        binding.editText.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                viewModel.inputText.value = s.toString()
-            }
-        })
+        /**
+         * The code bellow is replaced by the '=' in the xml layout
+         * Just write instead of
+         * @{viewModel.inputText} do
+         * @={viewModel.inputText}
+         */
+//        binding.editText.addTextChangedListener(object : TextWatcher {
+//            override fun afterTextChanged(s: Editable?) {
+////                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//
+//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+////                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//
+//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+//                viewModel.inputText.value = s.toString()
+//            }
+//        })
     }
 
 }

@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText"
-            android:text="@{viewModel.inputText}"
+            android:text="@={viewModel.inputText}"
             app:custom_title_field="@string/app_name"
             app:custom_error_field="@string/email_error"
             app:custom_input_field="@{viewModel.inputText}"

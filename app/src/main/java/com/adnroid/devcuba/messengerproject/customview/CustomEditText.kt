@@ -48,8 +48,14 @@ class CustomEditText @JvmOverloads constructor(
 
     fun setText(text: String) = binding.inputField.setText(text)
 
-    fun addTextChangedListener(listener: TextWatcher) =
-            binding.inputField.addTextChangedListener(listener)
+    /**
+     * The code bellow is replaced by the '=' in the xml layout
+     * Just write instead of
+     * @{viewModel.inputText} do
+     * @={viewModel.inputText}
+     */
+//    fun addTextChangedListener(listener: TextWatcher) =
+//            binding.inputField.addTextChangedListener(listener)
 
     fun setInputText(inputTextField: String) {
         binding.inputField.setText(inputTextField)
