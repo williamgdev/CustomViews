@@ -5,4 +5,4 @@ developers:<br>
 
 # Topics
 - Layout Chat Messages
-- CustomView with Reverse Data Binding
+- CustomView with Two ways Data Binding
