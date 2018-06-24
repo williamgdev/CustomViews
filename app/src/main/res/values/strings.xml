@@ -6,4 +6,5 @@
     <string name="default_input">Value String</string>
     <string name="input_field_string">%s</string>
     <string name="domagic">Do Magic</string>
+    <string name="password">Password</string>
 </resources>

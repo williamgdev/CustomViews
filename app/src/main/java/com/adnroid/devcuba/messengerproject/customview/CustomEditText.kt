@@ -2,7 +2,10 @@ package com.adnroid.devcuba.messengerproject.customview
 
 import android.content.Context
 import android.databinding.DataBindingUtil
+import android.graphics.Typeface
+import android.text.InputFilter
 import android.text.TextWatcher
+import android.text.method.TransformationMethod
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -21,7 +24,10 @@ class CustomEditText @JvmOverloads constructor(
     init {
 
         orientation = VERTICAL
-        attrs.let {
+        attrs?.let {
+
+            getAndroidAttributes(it)
+
             val typedArray = context.obtainStyledAttributes(it,
                     R.styleable.CustomEditText, 0, 0)
             val title = resources.getText(typedArray
@@ -44,18 +50,30 @@ class CustomEditText @JvmOverloads constructor(
             typedArray.recycle()
         }
     }
-    fun getText(): String = binding.inputField.text.toString()
 
-    fun setText(text: String) = binding.inputField.setText(text)
+    private fun getAndroidAttributes(attributeSet: AttributeSet) {
+        for (i in 1..attributeSet.attributeCount) {
+            when (attributeSet.getAttributeName(i-1)) {
+                "inputType" -> binding.inputField.inputType = attributeSet.getAttributeIntValue(i-1, binding.inputField.inputType)
+                "maxLines" -> binding.inputField.maxLines = attributeSet.getAttributeIntValue(i-1, binding.inputField.maxLines)
+                "hint" -> {
+                    val stringResource = attributeSet.getAttributeResourceValue(i-1, -1)
+                    if (stringResource != -1) {
+                        binding.inputField.hint = resources.getString(stringResource)
+                    }
+                }
+            }
+        }
+    }
 
-    /**
-     * The code bellow is replaced by the '=' in the xml layout
-     * Just write instead of
-     * @{viewModel.inputText} do
-     * @={viewModel.inputText}
-     */
-//    fun addTextChangedListener(listener: TextWatcher) =
-//            binding.inputField.addTextChangedListener(listener)
+    var text: String
+        get() = binding.inputField.text.toString()
+        set(value) {
+            binding.inputField.setText(value)
+        }
+
+    fun addTextChangedListener(listener: TextWatcher) =
+            binding.inputField.addTextChangedListener(listener)
 
     fun setInputText(inputTextField: String) {
         binding.inputField.setText(inputTextField)
