@@ -1,7 +1,7 @@
 Messenger Project
 developers:<br>
 - Will<br>
-- Yen
+- Yendry
 
 # Topics
 - Layout Chat Messages
