@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adnroid.devcuba.messengerproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SchoolActivity" />
-        <activity android:name=".swipetabs.SwipeTabsActivity"></activity>
+        <activity android:name=".swipetabs.SwipeTabsActivity"/>
+        <activity android:name=".RecyclerActivity"/>
     </application>
 
 </manifest>
