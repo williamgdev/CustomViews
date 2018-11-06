@@ -17,37 +17,37 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.adnroid.devcuba.messengerproject.MainActivity">
 
-        <com.adnroid.devcuba.messengerproject.customview.CustomEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:text="@={viewModel.inputText}"
-            android:inputType="textEmailAddress"
-            app:custom_title_field="@string/app_name"
-            app:custom_error_field="@string/email_error"
-            />
+        <!--<com.adnroid.devcuba.messengerproject.customview.CustomEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/editText"-->
+            <!--android:text="@={viewModel.inputText}"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--app:custom_title_field="@string/app_name"-->
+            <!--app:custom_error_field="@string/email_error"-->
+            <!--/>-->
 
-        <com.adnroid.devcuba.messengerproject.customview.CustomEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextPassword"
-            android:text="@={viewModel.inputText}"
-            android:inputType="textPassword"
-            android:hint="@string/password"
-            app:custom_title_field="@string/app_name"
-            app:custom_error_field="@string/email_error"
-            />
+        <!--<com.adnroid.devcuba.messengerproject.customview.CustomEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/editTextPassword"-->
+            <!--android:text="@={viewModel.inputText}"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:hint="@string/password"-->
+            <!--app:custom_title_field="@string/app_name"-->
+            <!--app:custom_error_field="@string/email_error"-->
+            <!--/>-->
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/domagic"
-            android:id="@+id/button"/>
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/domagic"-->
+            <!--android:id="@+id/button"/>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.inputText}"/>
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{viewModel.inputText}"/>-->
         <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->

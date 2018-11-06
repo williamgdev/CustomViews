@@ -1,6 +1,7 @@
 package com.adnroid.devcuba.messengerproject
 
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -18,12 +19,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModel = ViewModelProviders.of(this).get(CustomEditTextViewModel::class.java)
-        viewModel.inputText.value = "First Text"
-        binding.viewModel = viewModel
+//        viewModel = ViewModelProviders.of(this).get(CustomEditTextViewModel::class.java)
+//        viewModel.inputText.value = "First Text"
+//        binding.viewModel = viewModel
 
-        binding.setLifecycleOwner(this)
-        binding.button.setOnClickListener { viewModel.inputText.value = "Testing LiveData" }
+        launchSchoolActivity()
+//        binding.setLifecycleOwner(this)
+//        binding.button.setOnClickListener { viewModel.inputText.value = "Testing LiveData" }
         /**
          * The code bellow is replaced by the '=' in the xml layout
          * Just write instead of
@@ -43,6 +45,10 @@ class MainActivity : AppCompatActivity() {
 //                viewModel.inputText.value = s.toString()
 //            }
 //        })
+    }
+
+    private fun launchSchoolActivity() {
+        startActivity(Intent(this, SchoolActivity::class.java))
     }
 
 }
