@@ -7,3 +7,4 @@ developers:<br>
 - Layout Chat Messages
 - CustomView with Two ways Data Binding
 - CustomtabLayout with ViewPager
+- RecyclerView with Images using Glide
