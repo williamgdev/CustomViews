@@ -5,7 +5,7 @@
             name="studentEntity"
             type="com.adnroid.devcuba.messengerproject.fragment.StudentEntity"/>
     </data>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -31,5 +31,5 @@
             android:text="@{studentEntity.age}"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

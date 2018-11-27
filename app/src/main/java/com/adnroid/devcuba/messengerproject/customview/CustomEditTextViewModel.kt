@@ -1,11 +1,11 @@
 package com.adnroid.devcuba.messengerproject.customview
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import android.databinding.BindingAdapter
-import android.databinding.InverseBindingListener
-import android.databinding.InverseBindingMethod
-import android.databinding.InverseBindingMethods
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.databinding.BindingAdapter
+import androidx.databinding.InverseBindingListener
+import androidx.databinding.InverseBindingMethod
+import androidx.databinding.InverseBindingMethods
 import android.text.Editable
 import android.text.TextWatcher
 
