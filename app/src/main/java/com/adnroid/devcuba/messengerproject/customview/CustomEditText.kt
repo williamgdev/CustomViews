@@ -1,7 +1,7 @@
 package com.adnroid.devcuba.messengerproject.customview
 
 import android.content.Context
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.graphics.Typeface
 import android.text.InputFilter
 import android.text.TextWatcher

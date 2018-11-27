@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SchoolActivity"></activity>
+        <activity android:name=".SchoolActivity" />
+        <activity android:name=".swipetabs.SwipeTabsActivity"></activity>
     </application>
 
 </manifest>

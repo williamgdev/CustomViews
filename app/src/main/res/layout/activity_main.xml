@@ -4,6 +4,9 @@
         <variable
             name="viewModel"
             type="com.adnroid.devcuba.messengerproject.customview.CustomEditTextViewModel"/>
+        <variable
+            name="userInteraction"
+            type="com.adnroid.devcuba.messengerproject.MainActivity.MainUserInteraction"/>
     </data>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -38,11 +41,18 @@
             <!--app:custom_error_field="@string/email_error"-->
             <!--/>-->
 
-        <!--<Button-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/domagic"-->
-            <!--android:id="@+id/button"/>-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/domagic"
+            android:id="@+id/gotoSchool"
+            android:onClick="@{() -> userInteraction.gotoSchoolExample()}"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/domagic"
+            android:id="@+id/gotoSwipeTabs"
+            android:onClick="@{() -> userInteraction.gotoSwipeExample()}"/>
 
         <!--<TextView-->
             <!--android:layout_width="match_parent"-->

@@ -1,14 +1,12 @@
 package com.adnroid.devcuba.messengerproject
 
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.text.Editable
-import android.text.TextWatcher
+import androidx.appcompat.app.AppCompatActivity
 import com.adnroid.devcuba.messengerproject.customview.CustomEditTextViewModel
 import com.adnroid.devcuba.messengerproject.databinding.ActivityMainBinding
+import com.adnroid.devcuba.messengerproject.swipetabs.SwipeTabsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,8 +20,17 @@ class MainActivity : AppCompatActivity() {
 //        viewModel = ViewModelProviders.of(this).get(CustomEditTextViewModel::class.java)
 //        viewModel.inputText.value = "First Text"
 //        binding.viewModel = viewModel
+        binding.userInteraction = object: MainUserInteraction{
+            override fun gotoSchoolExample() {
+                launchSchoolActivity()
+            }
 
-        launchSchoolActivity()
+            override fun gotoSwipeExample() {
+                launchSwipeActivity()
+            }
+
+        }
+
 //        binding.setLifecycleOwner(this)
 //        binding.button.setOnClickListener { viewModel.inputText.value = "Testing LiveData" }
         /**
@@ -47,8 +54,17 @@ class MainActivity : AppCompatActivity() {
 //        })
     }
 
+    private fun launchSwipeActivity() {
+        startActivity(Intent(this, SwipeTabsActivity::class.java))
+    }
+
     private fun launchSchoolActivity() {
         startActivity(Intent(this, SchoolActivity::class.java))
+    }
+
+    interface MainUserInteraction {
+        fun gotoSchoolExample()
+        fun gotoSwipeExample()
     }
 
 }

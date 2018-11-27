@@ -1,7 +1,7 @@
 package com.adnroid.devcuba.messengerproject.fragment
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
 class ProfessorViewModel : ViewModel() {
     val listOfProfessor = MutableLiveData<List<ProfessorEntity>>()
